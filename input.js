@@ -1,5 +1,6 @@
 let connection;
 
+//Links standard input to game controls
 const setupInput = function(conn) {
   connection = conn;
   
@@ -15,6 +16,7 @@ const setupInput = function(conn) {
     key === "s" ? connection.write("Move: down") : null;
     key === "d" ? connection.write("Move: right") : null;
     key === "e" ? connection.write("Say: HAHAHA!") : null;
+    key === "q" ? connection.write("Say: NOOOO!") : null;
   };
 
   stdin.on("data", handleUserInput);
