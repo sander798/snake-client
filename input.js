@@ -14,6 +14,7 @@ const setupInput = function(conn) {
     key === "a" ? connection.write("Move: left") : null;
     key === "s" ? connection.write("Move: down") : null;
     key === "d" ? connection.write("Move: right") : null;
+    key === "e" ? connection.write("Say: HAHAHA!") : null;
   };
 
   stdin.on("data", handleUserInput);
