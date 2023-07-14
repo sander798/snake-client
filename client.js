@@ -13,6 +13,11 @@ const connect = function () {
   conn.on("data", (data) => {
     console.log(data);
   });
+  
+  conn.on("connect", () => {
+    console.log("Connected to game server.");
+    conn.write("Name: SDR");
+  });
 
   return conn;
 };
